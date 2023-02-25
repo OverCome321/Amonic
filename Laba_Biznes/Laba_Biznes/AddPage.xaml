@@ -1,0 +1,34 @@
+﻿<Page x:Class="Laba_Biznes.AddPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Laba_Biznes"
+      mc:Ignorable="d" d:DesignWidth="800"
+      Title="AddPage" Height="198" Width="1027">
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="267*"/>
+            <ColumnDefinition Width="0*"/>
+            <ColumnDefinition Width="107*"/>
+            <ColumnDefinition Width="574*"/>
+            <ColumnDefinition Width="46"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition  Height="50"/>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="41"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <TextBlock x:Name="NameHotelTB" HorizontalAlignment="Center" TextWrapping="Wrap" Text="Название" VerticalAlignment="Top" Height="26" Width="130" FontSize="20" TextAlignment="Center" Margin="41,12,105,0"/>
+        <TextBlock x:Name="CountOfStarsTB" HorizontalAlignment="Left" TextWrapping="Wrap" Text="Количество звезд" VerticalAlignment="Top" FontSize="20" TextAlignment="Center" Height="64" Width="162" Margin="30,46,0,0" Grid.RowSpan="3"/>
+        <TextBlock x:Name="CountryName" HorizontalAlignment="Left" Grid.Row="2" TextWrapping="Wrap" Text="Страна" VerticalAlignment="Center" Height="30" Width="76" FontSize="20" TextAlignment="Center" Margin="72,10,0,10"/>
+        <TextBox x:Name="NameTextB" HorizontalAlignment="Left" MaxLength="50" TextWrapping="Wrap" Text="{Binding Name_hotel}" VerticalAlignment="Center" Width="705" Height="28" Grid.Column="2" Margin="0,10,0,12" Grid.ColumnSpan="2"/>
+        <TextBox x:Name="CountOfStarsTextB" Grid.Column="2" HorizontalAlignment="Center" Margin="0,14,0,0" TextWrapping="Wrap" Text="{Binding Count_of_stars}" VerticalAlignment="Top" Width="111" Height="26" Grid.Row="1"/>
+        <ComboBox SelectedItem="{Binding Country}" x:Name="CountryComboBox" HorizontalAlignment="Left"  IsReadOnly="True"  Grid.Row="2" VerticalAlignment="Center" Width="705" Height="30" Grid.Column="2" Margin="0,9,0,11" Grid.ColumnSpan="2" DisplayMemberPath="Name_country"/>
+        <Button x:Name="SaveButton" Grid.Column="3" Content="Сохранить" HorizontalAlignment="Left" Grid.Row="3" VerticalAlignment="Center" FontSize="20" Click="SaveButton_Click" Height="36" Margin="109,3,0,2" Width="180"/>
+
+    </Grid>
+</Page>

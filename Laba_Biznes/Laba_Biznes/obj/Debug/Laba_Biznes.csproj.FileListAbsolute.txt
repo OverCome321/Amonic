@@ -1,0 +1,92 @@
+C:\Users\user\Desktop\Laba_Biznes\Laba_Biznes\bin\Debug\Laba_Biznes.exe.config
+C:\Users\user\Desktop\Laba_Biznes\Laba_Biznes\bin\Debug\Laba_Biznes.exe
+C:\Users\user\Desktop\Laba_Biznes\Laba_Biznes\bin\Debug\Laba_Biznes.pdb
+C:\Users\user\Desktop\Laba_Biznes\Laba_Biznes\obj\Debug\AddEditPage.g.cs
+C:\Users\user\Desktop\Laba_Biznes\Laba_Biznes\obj\Debug\HotelsPage.g.cs
+C:\Users\user\Desktop\Laba_Biznes\Laba_Biznes\obj\Debug\MainWindow.g.cs
+C:\Users\user\Desktop\Laba_Biznes\Laba_Biznes\obj\Debug\App.g.cs
+C:\Users\user\Desktop\Laba_Biznes\Laba_Biznes\obj\Debug\Laba_Biznes_MarkupCompile.cache
+C:\Users\user\Desktop\Laba_Biznes\Laba_Biznes\obj\Debug\Laba_Biznes_MarkupCompile.lref
+C:\Users\user\Desktop\Laba_Biznes\Laba_Biznes\obj\Debug\AddEditPage.baml
+C:\Users\user\Desktop\Laba_Biznes\Laba_Biznes\obj\Debug\HotelsPage.baml
+C:\Users\user\Desktop\Laba_Biznes\Laba_Biznes\obj\Debug\MainWindow.baml
+C:\Users\user\Desktop\Laba_Biznes\Laba_Biznes\obj\Debug\Laba_Biznes.g.resources
+C:\Users\user\Desktop\Laba_Biznes\Laba_Biznes\obj\Debug\Laba_Biznes.Properties.Resources.resources
+C:\Users\user\Desktop\Laba_Biznes\Laba_Biznes\obj\Debug\Laba_Biznes.csproj.GenerateResource.cache
+C:\Users\user\Desktop\Laba_Biznes\Laba_Biznes\obj\Debug\Laba_Biznes.csproj.CoreCompileInputs.cache
+C:\Users\user\Desktop\Laba_Biznes\Laba_Biznes\obj\Debug\Laba_Biznes.exe
+C:\Users\user\Desktop\Laba_Biznes\Laba_Biznes\obj\Debug\Laba_Biznes.pdb
+C:\Users\user\Desktop\Laba_Biznes\Laba_Biznes\obj\Debug\App.baml
+C:\Users\Max\OneDrive\Рабочий стол\Laba_Biznes\Laba_Biznes\bin\Debug\Laba_Biznes.exe.config
+C:\Users\Max\OneDrive\Рабочий стол\Laba_Biznes\Laba_Biznes\bin\Debug\Laba_Biznes.exe
+C:\Users\Max\OneDrive\Рабочий стол\Laba_Biznes\Laba_Biznes\bin\Debug\Laba_Biznes.pdb
+C:\Users\Max\OneDrive\Рабочий стол\Laba_Biznes\Laba_Biznes\obj\Debug\Laba_Biznes.csproj.AssemblyReference.cache
+C:\Users\Max\OneDrive\Рабочий стол\Laba_Biznes\Laba_Biznes\obj\Debug\Laba_Biznes.csproj.SuggestedBindingRedirects.cache
+C:\Users\Max\OneDrive\Рабочий стол\Laba_Biznes\Laba_Biznes\obj\Debug\AddEditPage.g.cs
+C:\Users\Max\OneDrive\Рабочий стол\Laba_Biznes\Laba_Biznes\obj\Debug\HotelsPage.g.cs
+C:\Users\Max\OneDrive\Рабочий стол\Laba_Biznes\Laba_Biznes\obj\Debug\MainWindow.g.cs
+C:\Users\Max\OneDrive\Рабочий стол\Laba_Biznes\Laba_Biznes\obj\Debug\App.g.cs
+C:\Users\Max\OneDrive\Рабочий стол\Laba_Biznes\Laba_Biznes\obj\Debug\Laba_Biznes_MarkupCompile.cache
+C:\Users\Max\OneDrive\Рабочий стол\Laba_Biznes\Laba_Biznes\obj\Debug\Laba_Biznes_MarkupCompile.lref
+C:\Users\Max\OneDrive\Рабочий стол\Laba_Biznes\Laba_Biznes\obj\Debug\App.baml
+C:\Users\Max\OneDrive\Рабочий стол\Laba_Biznes\Laba_Biznes\obj\Debug\AddEditPage.baml
+C:\Users\Max\OneDrive\Рабочий стол\Laba_Biznes\Laba_Biznes\obj\Debug\HotelsPage.baml
+C:\Users\Max\OneDrive\Рабочий стол\Laba_Biznes\Laba_Biznes\obj\Debug\MainWindow.baml
+C:\Users\Max\OneDrive\Рабочий стол\Laba_Biznes\Laba_Biznes\obj\Debug\Laba_Biznes.g.resources
+C:\Users\Max\OneDrive\Рабочий стол\Laba_Biznes\Laba_Biznes\obj\Debug\Laba_Biznes.Properties.Resources.resources
+C:\Users\Max\OneDrive\Рабочий стол\Laba_Biznes\Laba_Biznes\obj\Debug\Laba_Biznes.csproj.GenerateResource.cache
+C:\Users\Max\OneDrive\Рабочий стол\Laba_Biznes\Laba_Biznes\obj\Debug\Laba_Biznes.csproj.CoreCompileInputs.cache
+C:\Users\Max\OneDrive\Рабочий стол\Laba_Biznes\Laba_Biznes\obj\Debug\Laba_Biznes.exe
+C:\Users\Max\OneDrive\Рабочий стол\Laba_Biznes\Laba_Biznes\obj\Debug\Laba_Biznes.pdb
+C:\Users\Max\OneDrive\Рабочий стол\Laba_Biznes\Laba_Biznes\bin\Debug\EntityFramework.dll
+C:\Users\Max\OneDrive\Рабочий стол\Laba_Biznes\Laba_Biznes\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Max\OneDrive\Рабочий стол\Laba_Biznes\Laba_Biznes\bin\Debug\EntityFramework.xml
+C:\Users\Max\OneDrive\Рабочий стол\Laba_Biznes\Laba_Biznes\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Max\OneDrive\Рабочий стол\Laba_Biznes\Laba_Biznes\bin\Debug\ru\EntityFramework.resources.dll
+C:\Users\Max\OneDrive\Рабочий стол\Laba_Biznes\Laba_Biznes\obj\Debug\Laba_Biznes_Content.g.cs
+C:\Users\Max\OneDrive\Рабочий стол\Laba_Biznes\Laba_Biznes\obj\Debug\Laba_Biznes.csproj.CopyComplete
+C:\Users\user\Desktop\Laba_Biznes\Laba_Biznes\obj\Debug\Laba_Biznes_Content.g.cs
+C:\Users\user\Desktop\Laba_Biznes\Laba_Biznes\bin\Debug\EntityFramework.dll
+C:\Users\user\Desktop\Laba_Biznes\Laba_Biznes\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\user\Desktop\Laba_Biznes\Laba_Biznes\bin\Debug\EntityFramework.xml
+C:\Users\user\Desktop\Laba_Biznes\Laba_Biznes\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\user\Desktop\Laba_Biznes\Laba_Biznes\bin\Debug\ru\EntityFramework.resources.dll
+C:\Users\user\Desktop\Laba_Biznes\Laba_Biznes\obj\Debug\Laba_Biznes.csproj.CopyComplete
+C:\Users\user\Desktop\Laba_Biznes\Laba_Biznes\obj\Debug\AddPage.g.cs
+C:\Users\user\Desktop\Laba_Biznes\Laba_Biznes\obj\Debug\AddPage.baml
+D:\Лабораторные\Запорожец\Бизнес\Laba_Biznes\Laba_Biznes\obj\Debug\Laba_Biznes.csproj.AssemblyReference.cache
+D:\Лабораторные\Запорожец\Бизнес\Laba_Biznes\Laba_Biznes\obj\Debug\Laba_Biznes.csproj.SuggestedBindingRedirects.cache
+D:\Лабораторные\Запорожец\Бизнес\Laba_Biznes\Laba_Biznes\obj\Debug\AddEditPage.g.cs
+D:\Лабораторные\Запорожец\Бизнес\Laba_Biznes\Laba_Biznes\obj\Debug\AddPage.g.cs
+D:\Лабораторные\Запорожец\Бизнес\Laba_Biznes\Laba_Biznes\obj\Debug\HotelsPage.g.cs
+D:\Лабораторные\Запорожец\Бизнес\Laba_Biznes\Laba_Biznes\obj\Debug\MainWindow.g.cs
+D:\Лабораторные\Запорожец\Бизнес\Laba_Biznes\Laba_Biznes\obj\Debug\App.g.cs
+D:\Лабораторные\Запорожец\Бизнес\Laba_Biznes\Laba_Biznes\obj\Debug\Laba_Biznes_Content.g.cs
+D:\Лабораторные\Запорожец\Бизнес\Laba_Biznes\Laba_Biznes\obj\Debug\Laba_Biznes_MarkupCompile.cache
+D:\Лабораторные\Запорожец\Бизнес\Laba_Biznes\Laba_Biznes\obj\Debug\Laba_Biznes_MarkupCompile.lref
+D:\Лабораторные\Запорожец\Бизнес\Laba_Biznes\Laba_Biznes\obj\Debug\Laba_Biznes.exe
+D:\Лабораторные\Запорожец\Бизнес\Laba_Biznes\Laba_Biznes\obj\Debug\Laba_Biznes.pdb
+D:\Лабораторные\Запорожец\Бизнес\Laba_Biznes\Laba_Biznes\bin\Debug\Laba_Biznes.exe.config
+D:\Лабораторные\Запорожец\Бизнес\Laba_Biznes\Laba_Biznes\bin\Debug\Laba_Biznes.exe
+D:\Лабораторные\Запорожец\Бизнес\Laba_Biznes\Laba_Biznes\bin\Debug\Laba_Biznes.pdb
+D:\Лабораторные\Запорожец\Бизнес\Laba_Biznes\Laba_Biznes\bin\Debug\EntityFramework.dll
+D:\Лабораторные\Запорожец\Бизнес\Laba_Biznes\Laba_Biznes\bin\Debug\EntityFramework.SqlServer.dll
+D:\Лабораторные\Запорожец\Бизнес\Laba_Biznes\Laba_Biznes\bin\Debug\EntityFramework.xml
+D:\Лабораторные\Запорожец\Бизнес\Laba_Biznes\Laba_Biznes\bin\Debug\EntityFramework.SqlServer.xml
+D:\Лабораторные\Запорожец\Бизнес\Laba_Biznes\Laba_Biznes\bin\Debug\ru\EntityFramework.resources.dll
+D:\Лабораторные\Запорожец\Бизнес\Laba_Biznes\Laba_Biznes\obj\Debug\App.baml
+D:\Лабораторные\Запорожец\Бизнес\Laba_Biznes\Laba_Biznes\obj\Debug\AddEditPage.baml
+D:\Лабораторные\Запорожец\Бизнес\Laba_Biznes\Laba_Biznes\obj\Debug\AddPage.baml
+D:\Лабораторные\Запорожец\Бизнес\Laba_Biznes\Laba_Biznes\obj\Debug\HotelsPage.baml
+D:\Лабораторные\Запорожец\Бизнес\Laba_Biznes\Laba_Biznes\obj\Debug\MainWindow.baml
+D:\Лабораторные\Запорожец\Бизнес\Laba_Biznes\Laba_Biznes\obj\Debug\Laba_Biznes.g.resources
+D:\Лабораторные\Запорожец\Бизнес\Laba_Biznes\Laba_Biznes\obj\Debug\Laba_Biznes.Properties.Resources.resources
+D:\Лабораторные\Запорожец\Бизнес\Laba_Biznes\Laba_Biznes\obj\Debug\Laba_Biznes.csproj.GenerateResource.cache
+D:\Лабораторные\Запорожец\Бизнес\Laba_Biznes\Laba_Biznes\obj\Debug\Laba_Biznes.csproj.CoreCompileInputs.cache
+D:\Лабораторные\Запорожец\Бизнес\Laba_Biznes\Laba_Biznes\obj\Debug\Laba_Biznes.csproj.CopyComplete
+C:\Users\user\Desktop\Laba_Biznes\Laba_Biznes\obj\Debug\TourPage.g.cs
+C:\Users\user\Desktop\Laba_Biznes\Laba_Biznes\obj\Debug\TourPage.baml
+D:\Лабораторные\Запорожец\Бизнес\Laba_Biznes\Laba_Biznes\obj\Debug\TourPage.g.cs
+D:\Лабораторные\Запорожец\Бизнес\Laba_Biznes\Laba_Biznes\obj\Debug\TourPage.baml
+C:\Users\user\Desktop\Laba_Biznes\Laba_Biznes\obj\Debug\Laba_Biznes.csproj.AssemblyReference.cache
+C:\Users\user\Desktop\Laba_Biznes\Laba_Biznes\obj\Debug\Laba_Biznes.csproj.SuggestedBindingRedirects.cache

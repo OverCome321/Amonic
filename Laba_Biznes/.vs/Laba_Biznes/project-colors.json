@@ -1,0 +1,16 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "9553ef27-5f9f-4c74-9f03-9c9d59bcf7d2": {
+      "ProjectGuid": "9553ef27-5f9f-4c74-9f03-9c9d59bcf7d2",
+      "DisplayName": "Laba_Biznes",
+      "ColorIndex": 0
+    },
+    "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3": {
+      "ProjectGuid": "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3",
+      "DisplayName": "Прочие файлы",
+      "ColorIndex": -1
+    }
+  },
+  "NextColorIndex": 1
+}

@@ -1,0 +1,474 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="Хранилище HotelDB1Model" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Country">
+          <Key>
+            <PropertyRef Name="Code" />
+          </Key>
+          <Property Name="Code" Type="int" Nullable="false" />
+          <Property Name="Name_country" Type="varchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Hotel">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Name_hotel" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Count_of_stars" Type="int" Nullable="false" />
+          <Property Name="Country_code" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Hotel_comment">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" Nullable="false" />
+          <Property Name="Hotel_id" Type="int" Nullable="false" />
+          <Property Name="Comment" Type="varchar" MaxLength="500" />
+          <Property Name="Author" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Creation_Date" Type="date" Nullable="false" />
+        </EntityType>
+        <EntityType Name="HotellImage">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" Nullable="false" />
+          <Property Name="Hotel_id" Type="int" Nullable="false" />
+          <Property Name="Image_Source" Type="varchar" MaxLength="100" Nullable="false" />
+        </EntityType>
+        <EntityType Name="ImageTour">
+          <Key>
+            <PropertyRef Name="Image_tour_Id" />
+          </Key>
+          <Property Name="Image_tour_Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Image_tour" Type="image" />
+        </EntityType>
+        <EntityType Name="Tour">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" Nullable="false" />
+          <Property Name="Ticket_count" Type="int" />
+          <Property Name="Name_tour" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Description_tour" Type="varchar" MaxLength="100" />
+          <Property Name="Image_id" Type="int" Nullable="false" />
+          <Property Name="Price" Type="float" />
+          <Property Name="Is_Actual" Type="bit" />
+        </EntityType>
+        <EntityType Name="Type_Hotel">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" Nullable="false" />
+          <Property Name="Name_type" Type="nvarchar" MaxLength="50" />
+          <Property Name="Description_type" Type="nvarchar" MaxLength="100" />
+        </EntityType>
+        <Association Name="FK__Hotel__Country_c__398D8EEE">
+          <End Role="Country" Type="Self.Country" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="Hotel" Type="Self.Hotel" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Country">
+              <PropertyRef Name="Code" />
+            </Principal>
+            <Dependent Role="Hotel">
+              <PropertyRef Name="Country_code" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Hotel_com__Creat__3C69FB99">
+          <End Role="Hotel" Type="Self.Hotel" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="Hotel_comment" Type="Self.Hotel_comment" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Hotel">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="Hotel_comment">
+              <PropertyRef Name="Hotel_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__HotellIma__Image__3F466844">
+          <End Role="Hotel" Type="Self.Hotel" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="HotellImage" Type="Self.HotellImage" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Hotel">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="HotellImage">
+              <PropertyRef Name="Hotel_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Tour__Is_Actual__4222D4EF">
+          <End Role="Hotel" Type="Self.Hotel" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="Tour" Type="Self.Tour" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="Hotel">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="Tour">
+              <PropertyRef Name="id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Type_Hote__Descr__44FF419A">
+          <End Role="Tour" Type="Self.Tour" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="Type_Hotel" Type="Self.Type_Hotel" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="Tour">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="Type_Hotel">
+              <PropertyRef Name="id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="Хранит">
+          <End Role="ImageTour" Type="Self.ImageTour" Multiplicity="1" />
+          <End Role="Tour" Type="Self.Tour" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ImageTour">
+              <PropertyRef Name="Image_tour_Id" />
+            </Principal>
+            <Dependent Role="Tour">
+              <PropertyRef Name="Image_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="Хранилище HotelDB1ModelContainer">
+          <EntitySet Name="Country" EntityType="Self.Country" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Hotel" EntityType="Self.Hotel" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Hotel_comment" EntityType="Self.Hotel_comment" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="HotellImage" EntityType="Self.HotellImage" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ImageTour" EntityType="Self.ImageTour" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Tour" EntityType="Self.Tour" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Type_Hotel" EntityType="Self.Type_Hotel" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK__Hotel__Country_c__398D8EEE" Association="Self.FK__Hotel__Country_c__398D8EEE">
+            <End Role="Country" EntitySet="Country" />
+            <End Role="Hotel" EntitySet="Hotel" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Hotel_com__Creat__3C69FB99" Association="Self.FK__Hotel_com__Creat__3C69FB99">
+            <End Role="Hotel" EntitySet="Hotel" />
+            <End Role="Hotel_comment" EntitySet="Hotel_comment" />
+          </AssociationSet>
+          <AssociationSet Name="FK__HotellIma__Image__3F466844" Association="Self.FK__HotellIma__Image__3F466844">
+            <End Role="Hotel" EntitySet="Hotel" />
+            <End Role="HotellImage" EntitySet="HotellImage" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Tour__Is_Actual__4222D4EF" Association="Self.FK__Tour__Is_Actual__4222D4EF">
+            <End Role="Hotel" EntitySet="Hotel" />
+            <End Role="Tour" EntitySet="Tour" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Type_Hote__Descr__44FF419A" Association="Self.FK__Type_Hote__Descr__44FF419A">
+            <End Role="Tour" EntitySet="Tour" />
+            <End Role="Type_Hotel" EntitySet="Type_Hotel" />
+          </AssociationSet>
+          <AssociationSet Name="Хранит" Association="Self.Хранит">
+            <End Role="ImageTour" EntitySet="ImageTour" />
+            <End Role="Tour" EntitySet="Tour" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="HotelDB1Model" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="Country">
+          <Key>
+            <PropertyRef Name="Code" />
+          </Key>
+          <Property Name="Code" Type="Int32" Nullable="false" />
+          <Property Name="Name_country" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <NavigationProperty Name="Hotel" Relationship="Self.FK__Hotel__Country_c__398D8EEE" FromRole="Country" ToRole="Hotel" />
+        </EntityType>
+        <EntityType Name="Hotel">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name_hotel" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Count_of_stars" Type="Int32" Nullable="false" />
+          <Property Name="Country_code" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Country" Relationship="Self.FK__Hotel__Country_c__398D8EEE" FromRole="Hotel" ToRole="Country" />
+          <NavigationProperty Name="Hotel_comment" Relationship="Self.FK__Hotel_com__Creat__3C69FB99" FromRole="Hotel" ToRole="Hotel_comment" />
+          <NavigationProperty Name="HotellImage" Relationship="Self.FK__HotellIma__Image__3F466844" FromRole="Hotel" ToRole="HotellImage" />
+          <NavigationProperty Name="Tour" Relationship="Self.FK__Tour__Is_Actual__4222D4EF" FromRole="Hotel" ToRole="Tour" />
+        </EntityType>
+        <EntityType Name="Hotel_comment">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" />
+          <Property Name="Hotel_id" Type="Int32" Nullable="false" />
+          <Property Name="Comment" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="Author" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Creation_Date" Type="DateTime" Nullable="false" Precision="0" />
+          <NavigationProperty Name="Hotel" Relationship="Self.FK__Hotel_com__Creat__3C69FB99" FromRole="Hotel_comment" ToRole="Hotel" />
+        </EntityType>
+        <EntityType Name="HotellImage">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" />
+          <Property Name="Hotel_id" Type="Int32" Nullable="false" />
+          <Property Name="Image_Source" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+          <NavigationProperty Name="Hotel" Relationship="Self.FK__HotellIma__Image__3F466844" FromRole="HotellImage" ToRole="Hotel" />
+        </EntityType>
+        <EntityType Name="ImageTour">
+          <Key>
+            <PropertyRef Name="Image_tour_Id" />
+          </Key>
+          <Property Name="Image_tour_Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Image_tour" Type="Binary" MaxLength="Max" FixedLength="false" />
+          <NavigationProperty Name="Tour" Relationship="Self.Хранит" FromRole="ImageTour" ToRole="Tour" />
+        </EntityType>
+        <EntityType Name="Tour">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" />
+          <Property Name="Ticket_count" Type="Int32" />
+          <Property Name="Name_tour" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Description_tour" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Image_id" Type="Int32" Nullable="false" />
+          <Property Name="Price" Type="Double" />
+          <Property Name="Is_Actual" Type="Boolean" />
+          <NavigationProperty Name="Hotel" Relationship="Self.FK__Tour__Is_Actual__4222D4EF" FromRole="Tour" ToRole="Hotel" />
+          <NavigationProperty Name="ImageTour" Relationship="Self.Хранит" FromRole="Tour" ToRole="ImageTour" />
+          <NavigationProperty Name="Type_Hotel" Relationship="Self.FK__Type_Hote__Descr__44FF419A" FromRole="Tour" ToRole="Type_Hotel" />
+        </EntityType>
+        <EntityType Name="Type_Hotel">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" />
+          <Property Name="Name_type" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Description_type" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="Tour" Relationship="Self.FK__Type_Hote__Descr__44FF419A" FromRole="Type_Hotel" ToRole="Tour" />
+        </EntityType>
+        <Association Name="FK__Hotel__Country_c__398D8EEE">
+          <End Role="Country" Type="Self.Country" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="Hotel" Type="Self.Hotel" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Country">
+              <PropertyRef Name="Code" />
+            </Principal>
+            <Dependent Role="Hotel">
+              <PropertyRef Name="Country_code" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Hotel_com__Creat__3C69FB99">
+          <End Role="Hotel" Type="Self.Hotel" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="Hotel_comment" Type="Self.Hotel_comment" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Hotel">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="Hotel_comment">
+              <PropertyRef Name="Hotel_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__HotellIma__Image__3F466844">
+          <End Role="Hotel" Type="Self.Hotel" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="HotellImage" Type="Self.HotellImage" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Hotel">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="HotellImage">
+              <PropertyRef Name="Hotel_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Tour__Is_Actual__4222D4EF">
+          <End Role="Hotel" Type="Self.Hotel" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="Tour" Type="Self.Tour" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="Hotel">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="Tour">
+              <PropertyRef Name="id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="Хранит">
+          <End Role="ImageTour" Type="Self.ImageTour" Multiplicity="1" />
+          <End Role="Tour" Type="Self.Tour" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ImageTour">
+              <PropertyRef Name="Image_tour_Id" />
+            </Principal>
+            <Dependent Role="Tour">
+              <PropertyRef Name="Image_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Type_Hote__Descr__44FF419A">
+          <End Role="Tour" Type="Self.Tour" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="Type_Hotel" Type="Self.Type_Hotel" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="Tour">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="Type_Hotel">
+              <PropertyRef Name="id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="HotelDBEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Country" EntityType="Self.Country" />
+          <EntitySet Name="Hotel" EntityType="Self.Hotel" />
+          <EntitySet Name="Hotel_comment" EntityType="Self.Hotel_comment" />
+          <EntitySet Name="HotellImage" EntityType="Self.HotellImage" />
+          <EntitySet Name="ImageTour" EntityType="Self.ImageTour" />
+          <EntitySet Name="Tour" EntityType="Self.Tour" />
+          <EntitySet Name="Type_Hotel" EntityType="Self.Type_Hotel" />
+          <AssociationSet Name="FK__Hotel__Country_c__398D8EEE" Association="Self.FK__Hotel__Country_c__398D8EEE">
+            <End Role="Country" EntitySet="Country" />
+            <End Role="Hotel" EntitySet="Hotel" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Hotel_com__Creat__3C69FB99" Association="Self.FK__Hotel_com__Creat__3C69FB99">
+            <End Role="Hotel" EntitySet="Hotel" />
+            <End Role="Hotel_comment" EntitySet="Hotel_comment" />
+          </AssociationSet>
+          <AssociationSet Name="FK__HotellIma__Image__3F466844" Association="Self.FK__HotellIma__Image__3F466844">
+            <End Role="Hotel" EntitySet="Hotel" />
+            <End Role="HotellImage" EntitySet="HotellImage" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Tour__Is_Actual__4222D4EF" Association="Self.FK__Tour__Is_Actual__4222D4EF">
+            <End Role="Hotel" EntitySet="Hotel" />
+            <End Role="Tour" EntitySet="Tour" />
+          </AssociationSet>
+          <AssociationSet Name="Хранит" Association="Self.Хранит">
+            <End Role="ImageTour" EntitySet="ImageTour" />
+            <End Role="Tour" EntitySet="Tour" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Type_Hote__Descr__44FF419A" Association="Self.FK__Type_Hote__Descr__44FF419A">
+            <End Role="Tour" EntitySet="Tour" />
+            <End Role="Type_Hotel" EntitySet="Type_Hotel" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="Хранилище HotelDB1ModelContainer" CdmEntityContainer="HotelDBEntities">
+          <EntitySetMapping Name="Country">
+            <EntityTypeMapping TypeName="HotelDB1Model.Country">
+              <MappingFragment StoreEntitySet="Country">
+                <ScalarProperty Name="Code" ColumnName="Code" />
+                <ScalarProperty Name="Name_country" ColumnName="Name_country" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Hotel">
+            <EntityTypeMapping TypeName="HotelDB1Model.Hotel">
+              <MappingFragment StoreEntitySet="Hotel">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="Name_hotel" ColumnName="Name_hotel" />
+                <ScalarProperty Name="Count_of_stars" ColumnName="Count_of_stars" />
+                <ScalarProperty Name="Country_code" ColumnName="Country_code" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Hotel_comment">
+            <EntityTypeMapping TypeName="HotelDB1Model.Hotel_comment">
+              <MappingFragment StoreEntitySet="Hotel_comment">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="Hotel_id" ColumnName="Hotel_id" />
+                <ScalarProperty Name="Comment" ColumnName="Comment" />
+                <ScalarProperty Name="Author" ColumnName="Author" />
+                <ScalarProperty Name="Creation_Date" ColumnName="Creation_Date" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="HotellImage">
+            <EntityTypeMapping TypeName="HotelDB1Model.HotellImage">
+              <MappingFragment StoreEntitySet="HotellImage">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="Hotel_id" ColumnName="Hotel_id" />
+                <ScalarProperty Name="Image_Source" ColumnName="Image_Source" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ImageTour">
+            <EntityTypeMapping TypeName="HotelDB1Model.ImageTour">
+              <MappingFragment StoreEntitySet="ImageTour">
+                <ScalarProperty Name="Image_tour_Id" ColumnName="Image_tour_Id" />
+                <ScalarProperty Name="Image_tour" ColumnName="Image_tour" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Tour">
+            <EntityTypeMapping TypeName="HotelDB1Model.Tour">
+              <MappingFragment StoreEntitySet="Tour">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="Ticket_count" ColumnName="Ticket_count" />
+                <ScalarProperty Name="Name_tour" ColumnName="Name_tour" />
+                <ScalarProperty Name="Description_tour" ColumnName="Description_tour" />
+                <ScalarProperty Name="Image_id" ColumnName="Image_id" />
+                <ScalarProperty Name="Price" ColumnName="Price" />
+                <ScalarProperty Name="Is_Actual" ColumnName="Is_Actual" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Type_Hotel">
+            <EntityTypeMapping TypeName="HotelDB1Model.Type_Hotel">
+              <MappingFragment StoreEntitySet="Type_Hotel">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="Name_type" ColumnName="Name_type" />
+                <ScalarProperty Name="Description_type" ColumnName="Description_type" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="Нет" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
